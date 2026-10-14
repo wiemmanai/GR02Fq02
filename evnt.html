@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice React</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        class Bienvenue extends React.Component {
+            render() {
+                return (
+                    <h2>Bienvenue {this.props.nom} !</h2>
+                );
+            }
+        }
+
+        class App extends React.Component {
+
+            constructor(props) {
+                super(props);
+
+                this.state = {
+                    msg: "Veuillez vous inscrire",
+                    ins: "Changer l'image",
+                    image: "https://cdn-icons-png.flaticon.com/512/1069/1069885.png"
+                };
+
+                this.styles = {
+                    fontWeight: "bold",
+                    color: "teal"
+                };
+            }
+
+            changerImage = () => {
+                this.setState({
+                    image:
+                        this.state.image === "https://cdn-icons-png.flaticon.com/512/1069/1069885.png"
+                            ? "https://cdn-icons-png.flaticon.com/512/1828/1828884.png"
+                            : "https://cdn-icons-png.flaticon.com/512/1069/1069885.png"
+                });
+            };
+
+            render() {
+                return (
+                    <div>
+                        <h1 style={this.styles}>
+                            {this.state.msg}
+                        </h1>
+
+                        <Bienvenue nom="Maissa & Wiem" />
+
+                        <img
+                            src={this.state.image}
+                            alt="Image changeante"
+                            width="150"
+                        />
+
+                        <br /><br />
+
+                        <button onClick={this.changerImage}>
+                            {this.state.ins}
+                        </button>
+                    </div>
+                );
+            }
+        }
+
+        const root = ReactDOM.createRoot(
+            document.getElementById("root")
+        );
+
+        root.render(<App />);
+
+    </script>
+
+</body>
+</html>
