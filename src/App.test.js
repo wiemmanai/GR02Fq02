@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
@@ -6,7 +5,7 @@ test('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
-=======
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
 
@@ -22,5 +21,5 @@ test("le clic sur Aimer change le message (challenge)", () => {
   render(<App />);
   fireEvent.click(screen.getByRole("button", { name: /Aimer/i }));
   expect(screen.getByText("Premier défi réussi")).toBeInTheDocument();
->>>>>>> be522180fc278e7015a2e487ac7a9d79edc052ee
 });
+
