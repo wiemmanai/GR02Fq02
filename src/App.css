@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 body {
   background-color: whitesmoke;
@@ -15,4 +16,8 @@ body {
 h1 {
   font-size: 100px;
   text-align: center;
+=======
+.blue-icon {
+  color: #1f2d3d;
+>>>>>>> be522180fc278e7015a2e487ac7a9d79edc052ee
 }

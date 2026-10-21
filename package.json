@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "conditional",
+=======
+  "name": "td1",
+>>>>>>> be522180fc278e7015a2e487ac7a9d79edc052ee
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,8 +11,14 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
+=======
+    "font-awesome": "^4.7.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+>>>>>>> be522180fc278e7015a2e487ac7a9d79edc052ee
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
